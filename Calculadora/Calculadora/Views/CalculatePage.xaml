@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Calculadora.Views.CalculatePage">
+
+    <ContentPage.Resources>
+        <StyleSheet Source="/Assets/styles.css"/>
+    </ContentPage.Resources>
+
+    <StackLayout x:Name="calculadora">
+        <StackLayout HeightRequest="20" VerticalOptions="EndAndExpand">
+            <Label Text="0" FontSize="30" HorizontalOptions="End" VerticalOptions="End" x:Name="txtResult"/> 
+        </StackLayout>
+        <StackLayout VerticalOptions="EndAndExpand" Padding="3">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition  Width="*" />
+                    <ColumnDefinition  Width="*" />
+                    <ColumnDefinition  Width="*" />
+                </Grid.ColumnDefinitions>
+
+                <Button BackgroundColor="Gray" Grid.Row="0" Grid.Column="0" Text="C" TextColor="White" class="button" x:Name="btnC" Clicked="btnC_clicked" BorderRadius="100"/>
+                <Button BackgroundColor="Gray" Grid.Row="0" Grid.Column="1" Text="+/-" TextColor="White" class="button" x:Name="btnSig" Clicked="btnSig_clicked" BorderRadius="60"/>
+                <Button BackgroundColor="Gray" Grid.Row="0" Grid.Column="2" Text="%" TextColor="White" class="button" x:Name="btnPorcent" Clicked="btnPorcent_clicked" BorderRadius="60"/>
+                <Button BackgroundColor="#E87B0D" Grid.Row="0" Grid.Column="3" Text="/" TextColor="White" x:Name="btnDivision" Clicked="btnDivision_clicked" BorderRadius="60"/>
+                <Button BackgroundColor="#272621" Grid.Row="1" Grid.Column="0" Text="7" TextColor="White" x:Name="n7" Clicked="btn7_clicked" BorderRadius="60"/>
+                <Button BackgroundColor="#272621" Grid.Row="1" Grid.Column="1" Text="8" TextColor="White" x:Name="n8" Clicked="btn8_clicked" BorderRadius="60"/>
+                <Button BackgroundColor="#272621" Grid.Row="1" Grid.Column="2" Text="9" TextColor="White" x:Name="n9" Clicked="btn9_clicked" BorderRadius="60"/>
+                <Button BackgroundColor="#E87B0D" Grid.Row="1" Grid.Column="3" Text="X" TextColor="White" x:Name="btnMultipli" Clicked="btnMultipli_clicked" BorderRadius="60"/>
+                <Button BackgroundColor="#272621" Grid.Row="2" Grid.Column="0" Text="4" TextColor="White" x:Name="n4" Clicked="btn4_clicked" BorderRadius="60"/>
+                <Button BackgroundColor="#272621" Grid.Row="2" Grid.Column="1" Text="5" TextColor="White" x:Name="n5" Clicked="btn5_clicked" BorderRadius="60"/>
+                <Button BackgroundColor="#272621" Grid.Row="2" Grid.Column="2" Text="6" TextColor="White" x:Name="n6" Clicked="btn6_clicked" BorderRadius="60"/>
+                <Button BackgroundColor="#E87B0D" Grid.Row="2" Grid.Column="3" Text="-" TextColor="White" x:Name="btnResta" Clicked="btnResta_clicked" BorderRadius="60"/>
+                <Button BackgroundColor="#272621" Grid.Row="3" Grid.Column="0" Text="1" TextColor="White" x:Name="n1" Clicked="btn1_clicked" BorderRadius="60"/>
+                <Button BackgroundColor="#272621" Grid.Row="3" Grid.Column="1" Text="2" TextColor="White" x:Name="n2" Clicked="btn2_clicked" BorderRadius="60"/>
+                <Button BackgroundColor="#272621" Grid.Row="3" Grid.Column="2" Text="3" TextColor="White" x:Name="n3" Clicked="btn3_clicked" BorderRadius="60"/>
+                <Button BackgroundColor="#E87B0D" Grid.Row="3" Grid.Column="3" Text="+" TextColor="White" x:Name="btnSuma" Clicked="btnSuma_clicked" BorderRadius="60"/>
+                <Button BackgroundColor="#272621" Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="2" Text="0" TextColor="White" x:Name="n0" Clicked="btn0_clicked" BorderRadius="60"/>
+                <Button BackgroundColor="#272621" Grid.Row="4" Grid.Column="2" Text="." TextColor="White" x:Name="punto" Clicked="btnPunto_clicked" BorderRadius="60"/>
+                <Button BackgroundColor="#E87B0D" Grid.Row="4" Grid.Column="3" Text="=" TextColor="White" x:Name="btnIgual" Clicked="btnIgual_clicked" BorderRadius="60"/>
+
+            </Grid>
+        </StackLayout>
+    </StackLayout>
+</ContentPage>
